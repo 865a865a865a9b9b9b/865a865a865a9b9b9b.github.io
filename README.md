@@ -1,1 +1,506 @@
-website
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>.navcontainer{
+  background: #2c3e50;
+  height: 110px;
+  width: 100%;
+  margin-bottom: 0px;
+}
+.navbar{
+  padding: 40px;
+  width: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  color: white;
+  font-weight: 900;
+  font-family: 'Monserrat', sans-serif;
+  font-size: 25px;
+  margin-left: 100px;
+}
+
+ul.navbarelements li{
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  font-size: 15px;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-style: bold;
+  position: relative;
+  bottom: 80px;
+  left: 70%;
+  transition-property: color 0.5s linear, #8bc9c;
+ 
+}
+
+ul.navbarelements li a{
+  text-decoration: none;
+  color: white;
+  padding: 0px 20px;
+ 
+}
+
+.contact-menu{
+  padding-left: 0px;
+  margin-left: -40px;
+}
+
+/* Head */ 
+
+.head{
+  text-decoration: none;
+  background-color: #18bc9c;
+  text-align: center;
+  width: 100%;
+  margin-top: -40px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1.title{
+  text-decoration: none;
+  color: white;
+  position: inline-block;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img.main-picture{
+  padding-top: 60px;
+}
+
+img.center{
+  display: block;
+  margin: auto;
+  margin-top: -60px;
+}
+
+h2.titled{
+  text-decoration: none;
+  display: block;
+  color: white;
+  padding-top: 0px;
+  padding-bottom: 60px;
+  font-weight: 100;
+  font-size: 1.5em;
+  margin-top: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Portafolio */
+
+.psection{
+  text-decoration: none;
+  background-color: #FFFFFF;
+  text-align: center;
+  width: 100%;
+  padding-top: 10px;
+  margin: auto;
+  color: #2c3e4f;
+}
+
+h1.titlep{
+  text-decoration: none;
+  color: #2c3e4f;
+  position: inline-block;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img.main-picturep{
+  display: block;
+  margin: auto;
+  margin-top: -50px;
+}
+
+img.main-one{
+    width: 30%;
+    display: inline-block;
+    position: relative;
+    float: left;
+    margin-left: 2%;
+    margin-top: 5%;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+img.main-two{
+    width: 30%;
+    display: inline-block;
+    position: relative;
+    float: center;
+    margin-top: 5%;
+    padding-top: 10px;
+    padding-left: 40px;
+}
+
+img.main-three{
+    width: 30%;
+    display: inline-block;
+    position: relative;
+    float: right;
+    margin-top: 5%;
+    padding-top: 10px;
+  padding-right: 20px;
+}
+
+img.main-four{
+    width: 30%;
+    display: inline-block;
+    position: relative;
+    float: left;
+    margin-left: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-left: 20px;
+}
+
+img.main-five{
+    width: 30%;
+    display: inline-block;
+    position: relative;
+    float: center;
+    margin-top: 5%;
+}
+
+img.main-six{
+    width: 30%;
+    display: inline-block;
+    position: relative;
+    float: right;
+    margin-top: 5%;
+  padding-right: 20px;
+}
+
+/* About */
+
+.aboutsection{
+  text-decoration: none;
+  background-color: #18bc9c;
+  width: 100%;
+  height: 600px;
+  pading: 90px;
+  padding-top: 10px;
+  clear: left;
+  margin-top: 80px;
+  text-align: center;
+  color: white;
+}
+
+h1.about{
+  text-decoration: none;
+  color: white;
+  position: inline-block;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img.main-picturea{
+  display: block;
+  margin: auto;
+  margin-top: -50px;
+}
+
+.row{
+  display: inline-block;
+  margin-bottom: 100%;
+  font-family: 'Montserrat', sans-serif;
+  width: 50%;
+  height: 50px;
+  font-size: 19px;
+  margin-top: 20px;
+  border-bottom: 50px;
+  border-top: -100;
+  padding-left: 250px;
+}
+
+td.box-left{
+  padding-right: 30px;
+  text-align: left;
+}
+
+td.box-right{
+  padding-right: 30px;
+  text-align: left;
+}
+
+.boton{
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-weight: 400;
+  text-align: center;
+  
+}
+
+/* Contact me */
+
+.csection{
+  text-decoration: none;
+  background-color: #FFFFFF;
+  text-align: center;
+  width: 100%;
+  height: 250px;
+  padding-top: -70px;
+  margin-bottom: 200px;
+  color: #2c3e4f;
+}
+
+h1.titlec{
+  text-decoration: none;
+  color: #2c3e4f;
+  position: inline-block;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+.form{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #787878;
+  position: relative;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 30px;
+}
+
+
+.send{
+  background-color: rgb(0, 188, 158);
+  color: #fff;
+  font-size: 20px;
+  padding: 18px 25px;
+  border: 1px solid rgb(0, 188, 158);
+  border-radius: 10px;
+}
+
+
+
+
+
+
+.fsection{
+  text-decoration: none;
+  background-color: #2c3e50;
+  width: 100%;
+  height: 400px;
+  margin-top: 100px;  
+  padding-top: 10px;
+  color: #FFF;
+}
+
+.titles{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  padding-left:100px;
+  padding-top: 150px;
+  padding-right: 50px;
+  text-transfor: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  position: relative;
+  left: 50px;
+  bottom: 80px;
+  text-align: center;
+}
+
+.tone{
+  padding-right: 200px;
+}
+
+.ttwo{
+  padding-left:50px;
+  padding-right:100px;
+}
+
+.tthree{
+  padding-left: 100px;
+}
+
+.subone{
+  display: block;
+  font-weight: 500;
+  color: #fff;
+  font-size: 19px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  padding-left: 80px;
+  padding-top: -40px;
+}
+
+.subtwo{
+  display: block;
+  font-weight: 500;
+  color: #fff;
+  font-size: 19px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding-top: -60px;
+  padding-left: 900px;
+}
+
+a.link{
+  text-decoration: none;
+  font-weight: bold;
+  color: #00bc9e;
+}
+
+
+
+.container{
+  display: block;
+  text-decoration: none;
+  widht: 100%;
+  height: 80px;
+  background-color: #1a252f;
+  color: white;
+  text-align: center;
+  padding-top: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+
+</style>
+</head>
+<body>
+ <body id="page-top">
+ <!-- Nav -->
+      <nav>
+        <div class="navcontainer">
+          <a class="navbar">START BOOTSTRAP</a>
+          <div>
+          <ul class="navbarelements">
+            <li><a href="#portafolio">PORTAFOLIO</a></li>
+            <li><a href="#about">ABOUT</li>
+            <li><a class="contact-menu" href="#contact">CONTACT</li>
+          </ul>
+        </div>
+      </div>
+          
+      </nav>
+  <!-- Header -->
+    <header class="head">
+      <img class="main-picture"              src="https://tovarb.github.io/freelancer/assets/images/profile.png"/>
+      <h1 class="title">START BOOTSTRAP</h1>
+      <br>     
+      <img class="center" src="https://tovarb.github.io/freelancer/assets/images/decoration1.png"/>
+      <h2 class="titled">Web Developer - Graphic Artist - User Experience Designer</h2>
+      <br><br>
+    </header>
+ <!-- Section Portafolio -->
+    <section class="psection">
+      <h1 class="titlep" id="portafolio">PORTAFOLIO</h1>
+      <img class="main-picturep" src="https://tovarb.github.io/freelancer/assets/images/decoration2.png"/>
+      <div>
+        <a>
+          <img class="main-one" src="https://tovarb.github.io/freelancer/assets/images/portfolio/cabin.png"/>
+        </a>
+        <a>
+          <img class="main-two" src="https://tovarb.github.io/freelancer/assets/images/portfolio/cake.png"/>
+        </a>
+        <a>
+          <img class="main-three" src="https://tovarb.github.io/freelancer/assets/images/portfolio/circus.png"/>
+        </a>
+        <a>
+          <img class="main-four" src="https://tovarb.github.io/freelancer/assets/images/portfolio/game.png"/>
+        </a>
+        <a>
+          <img class="main-five" src="https://tovarb.github.io/freelancer/assets/images/portfolio/safe.png"/>
+        </a>
+        <a>
+          <img class="main-six" src="https://tovarb.github.io/freelancer/assets/images/portfolio/submarine.png"/>
+        </a>
+      </div>
+    </section>
+  <!-- Section About -->
+    <section class="aboutsection">
+      <h1 id="about" class="about">ABOUT</h1>
+      <img class="main-picturea" src="https://tovarb.github.io/freelancer/assets/images/decoration1.png"/>
+    <div>
+      <table class="row">
+        <tr>     
+          <td class="box-left">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</td>
+        <td class="box-right">Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</td>
+        </tr>     
+      </table>
+
+      </div>
+    </section>
+    
+  <!-- Section Contact Me -->
+    
+    <section class="csection">
+      <h1 class="titlec" id="contact">CONTACT ME</h1>
+      <img class="main-picturep" src="https://tovarb.github.io/freelancer/assets/images/decoration2.png"/>
+      <form class="form">
+        <div>
+          <label class="none" for"text"> <n>Nombre</n></label>
+          <input id="text" name="text">
+        </div>
+        <div>
+          <label for"text"> <n>Email-Address</n></label>
+          <input id="text" name="text">
+        </div>
+        <div>
+          <label for"text"> <n>Phone Number</n></label>
+          <input id="text" name="text">
+        </div>
+      </form>
+      <form>
+          <label for"text"> <n>Message</n></label>
+          <textarea id="text" name="text" rows="#" cols="#"></textarea>
+        <div class="boton">
+          <input class="send" type="submit" value="send">
+        </div>
+      </form>
+    </section>
+   <!-- Section Footer -->
+    <footer class="fsection">
+      <div class="titles">     
+          <a class="tone">LOCATION</a>
+          <a class="ttwo">AROUND THE WEB</a>
+          <a class="tthree">ABOUT FREELANCER</a>
+      </div>
+      <br>
+      <div>
+        <table>
+          <tr>
+            <td class="subone">2215 John Daniel Drive<br> Clark MO 65243</td>
+            <td class="subtwo">"Freelancer is a free to use, open source <br> Bootstrap theme created by"<a class="link" id="edition-link" href="">Start Bootstrap.</a></td>
+          </tr>
+        </table>
+      </div>
+ </footer>
+  <div id="copyright">
+      <div class="container">
+        <small>Copyright © Your Website 2023</small>
+      </div>
+    </div>
+  </body>   
+</body>
+</html>
