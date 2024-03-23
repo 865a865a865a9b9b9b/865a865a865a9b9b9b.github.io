@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*    responsive design:
+    make pages display properly in screens with different size
+    */
+        /*   mobile, tablet, desktop, tv */
+        section {
+            border: solid 5px green;
+            height: 100px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        #tablet {
+            display: none;
+        }
+
+        #desktop {
+            display: none;
+        }
+
+        /*    @media screen*/
+        @media all and (min-width:700px) {
+            section {
+                display: inline-block;
+                width: 48%;
+                background-color: blue;
+            }
+
+            #mobile {
+                display: none;
+            }
+
+            #tablet {
+                display: block;
+            }
+        }
+
+        @media all and (min-width:1000px) {
+            section {
+                display: inline-block;
+                width: 32%;
+
+                background-color: red;
+            }
+
+            #tablet {
+                display: none;
+            }
+
+            #desktop {
+                display: block;
+            }
+        }
+
+        img {
+            height: 100px;
+        }
+
+        @media print {
+            img {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1 id="mobile">Mobile</h1>
+    <h1 id="tablet">Tablet</h1>
+    <h1 id="desktop">Desktop</h1>
+
+    <section><img src="https://images.unsplash.com/photo-1671726203427-b1b674ec565f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt=""></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+
+</body>
+
+</html>

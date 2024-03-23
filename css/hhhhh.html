@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        section,
+        div {
+            border: solid;
+        }
+
+        nav {
+            background-color: lime;
+        }
+
+        nav li {
+            font-size: 40px;
+            display: inline-block;
+            /*      top and bottom, left and right*/
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav li:hover {
+            box-shadow: 0px 0px 21px 10px pink;
+        }
+
+        aside {
+            width: 80px;
+            height: 100px;
+            border: solid;
+            background-color: aqua;
+            float: right;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--  section provide more meaning for the docuemnt-->
+    <!--  means provide more semantic -->
+    <section>section</section>
+    <div>div</div>
+
+    <!--  article can include section -->
+    <article>
+        <section>problem</section>
+        <section>solution</section>
+        <section>summary</section>
+    </article>
+
+    <section id='blog'>
+        <article>one</article>
+        <article>two</article>
+        <article>three</article>
+    </section>
+
+    <nav>
+        <ul>
+            <li>about</li>
+            <li>product</li>
+            <li>contact</li>
+        </ul>
+    </nav>
+
+    <details>
+        <summary>Schedule</summary>
+        <ul>
+            <li>morning</li>
+            <li>afternoon</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere amet quis nesciunt omnis velit dolore qui veniam odio maiores nisi, quasi quae libero mollitia, quidem laborum sint id molestiae doloribus!</p>
+    </details>
+
+    <!-- meaning -->
+    <aside>
+        this is sidebar
+    </aside>
+</body>
+
+</html>

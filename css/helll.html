@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,300;1,400;1,500;1,600;1,700;1,800&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        img {
+            width: 200px;
+            margin-top: 100px;
+        }
+
+
+
+        h2 {
+            font-family: monospace;
+            color: white;
+            text-align: center;
+        }
+
+        hr {
+            width: 300px;
+            height: 3px;
+            background-color: white;
+            color: white;
+            margin: auto;
+            margin-bottom: 40px;
+            border: none;
+        }
+
+
+        hr {
+            width: 100px;
+            margin: 100px;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        body {
+            font-size: 20px;
+        }
+
+        i.fa-solid-star {
+            margin: auto;
+            text-align: center;
+        }
+
+        i {
+            font-size: 30px;
+        }
+
+        hr {
+            display: inline-block;
+            width: 100px;
+            height: 5px;
+            background-color: black;
+            border-radius: 5px;
+        }
+
+
+        .seperator {
+            margin: auto;
+            text-align: center;
+        }
+
+        img {
+            display: inline-block;
+            width: 400px;
+            border-radius: 15px;
+            margin: auto;
+        }
+
+        img {
+            display: inline-block;
+            width: 400px;
+            border-radius: 15px;
+            margin-left: 25px;
+            margin-top: 25px;
+            position: relative;
+            left: 100px;
+            margin: auto;
+        }
+
+        /*  contact me  */
+        * {
+            background-color: aquamarine;
+        }
+
+        :first-child {
+            /*      cmd+shift+arrowUp/arrowDown*/
+            font-size: 36px;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            color: #2c3d50;
+            margin-bottom: 20px;
+        }
+
+        .seperator {
+            text-align: center;
+        }
+
+        hr {
+            display: inline-block;
+            width: 100px;
+            height: 5px;
+            background-color: #2c3d50;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .seperator i {
+            font-size: 30px;
+            margin: 0 15px;
+            color: #2c3d50;
+        }
+
+        #contactme form input,
+        #contactme textarea {
+            border: none;
+            border-bottom: solid #ced4da;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 26px 0;
+            font-size: 23px;
+            font-family: 'Lato', sans-serif;
+        }
+
+        #contactme textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        ::placeholder {
+            color: #6c757d;
+        }
+
+        ::-ms-input-placeholder {
+            color: #6c757d;
+        }
+
+        #contactme form {
+            width: 70%;
+            margin: auto;
+            margin-top: 38px;
+        }
+
+        #contactme input[type='submit'] {
+            width: auto;
+            padding: 16px 25px;
+            background-color: #75d4bf;
+            color: white;
+            border-radius: 8px;
+            margin-top: 18px;
+        }
+
+        #contactme {
+            padding: 80px 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header><img src="https://builder.startbootstrap.com/assets/freelancer/img/avataaars.svg" alt=""></header>
+    <h2>START BOOTSTRAP</h2>
+    <hr>
+    <h2>Graphic Artist - Web Designer - Illustrator</h2>
+
+    <h>portfolio</h>
+    <div class="seperator">
+        <hr>
+        <i class="fa-solid fa-star"></i>
+        <hr>
+    </div>
+    <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/cabin.png" alt="">
+    <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/cake.png" alt="">
+    <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/circus.png" alt="">
+    <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/game.png" alt="">
+    <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/safe.png" alt="">
+    <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/submarine.png" alt="">
+
+    <section id="contactme">
+        <h1>CONTACT ME</h1>
+        <div class='seperator'>
+            <hr>
+            <i class="fa-solid fa-star"></i>
+            <hr>
+        </div>
+
+        <!--    form>input+input:email+input:tel+textarea+input:submit-->
+        <form action="">
+            <input type="text" placeholder='Full name'>
+            <input type="email" placeholder='Email address' name="" id="">
+            <input type="tel" placeholder='Phone number' name="" id="">
+            <textarea placeholder='Message' name="" id="" cols="30" rows="10"></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+  <script>// Simple Guessing Game
+
+// Generate a random number between 1 and 100
+const target = Math.floor(Math.random() * 100) + 1;
+
+// Variables to keep track of the game state
+let guess;
+let attempts = 0;
+
+// Game loop
+while (guess !== target) {
+  // Get the player's guess
+  guess = parseInt(prompt("Guess a number between 1 and 100:"));
+  
+  // Validate the guess
+  if (isNaN(guess)) {
+    alert("Invalid input. Please enter a number.");
+    continue;
+  }
+  
+  // Check the guess against the target
+  if (guess < target) {
+    alert("Too low! Try again.");
+  } else if (guess > target) {
+    alert("Too high! Try again.");
+  }
+  
+  // Increment the number of attempts
+  attempts++;
+}
+
+// End of game
+alert(`You got it in ${attempts} attempts! The target was ${target}.`);</script> 
+</body>
+</html>

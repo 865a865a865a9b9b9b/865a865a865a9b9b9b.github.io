@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8" />
+    <title>shadow</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000
+        }
+
+
+        .shadow {
+            position: relative;
+            margin: 100px auto 0;
+            width: 400px;
+            height: 250px;
+            background: linear-gradient(0deg, #000, #262626);
+            border-radius: 10px;
+        }
+
+        .shadow:before,
+        .shadow:after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+            background-size: 400%;
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            z-index: -1;
+            animation: animate 20s linear infinite;
+            border-radius: 10px;
+        }
+
+        .shadow:after {
+            filter: blur(20px);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .header h1 {
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 2rem;
+            font-weight: 100;
+            letter-spacing: 2px;
+            text-align: center;
+            color: #fb0094;
+            background-image: -webkit-linear-gradient(92deg, #fb0094, #00ff00, #00ff00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-animation: hue 10s infinite linear;
+            text-shadow: 5px 22px 2px;
+            text-shadow: 5px 22px 2px;
+        }
+
+        @-webkit-keyframes hue {
+            from {
+                -webkit-filter: hue-rotate(0deg);
+            }
+
+            to {
+                -webkit-filter: hue-rotate(-360deg);
+            }
+        }
+
+
+        @keyframes animate {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 300% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="shadow">
+        <div class="header">
+            <h1>Hello,i don't know what to put here</h1>
+        </div>
+    </div>
+
+
+
+</body></html>

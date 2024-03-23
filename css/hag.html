@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        h1 {
+            font-size: 50px;
+            color: #2cbaba;
+            padding-top: 10px;
+            text-align: center;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+.seperator {
+      text-align: center;
+    }
+
+    hr {
+      display: inline-block;
+      width: 100px;
+      height: 5px;
+      background-color: black;
+      border: none;
+      border-radius: 5px;
+    }
+
+    i {
+      font-size: 30px;
+      margin: 0 15px;
+    }
+
+
+        .f-input::placeholder {
+            color: black;
+            opacity: 0.9;
+        }
+
+        .f-input {
+            border: 2px solid #2cbaba;
+            transition: all 0.3s;
+            padding: 13px;
+            margin-bottom: 15px;
+            width: 100%;
+            box-sizing: border-box;
+            color: black;
+            font-family: sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            border-radius: 4px;
+            line-height: 22px;
+            text-align: left;
+        }
+
+        .f-input:focus {
+            border: 2px solid #3a3939;
+        }
+
+        textarea {
+            height: 250px;
+            line-height: 150%;
+            resize: vertical;
+        }
+
+        button {
+            max-width: 450px;
+            font-family: sans-serif;
+            width: 100%;
+            background: #2cbaba;
+            border-radius: 10px;
+            border: 0;
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        button:hover {
+
+            background: #3a3939;
+        }
+
+        p {
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+   
+    <h1>HAVE QUESTIONS?</h1>
+    <div class='seperator black'>
+    <hr>
+    <i class="fa-solid fa-star"></i>
+    <hr>
+  </div>
+    <form action="mailto:mail@mail.com" method="GET" enctype="text/plain" style="max-width:450px; margin:50px auto;"><input name="name" type="text" class="f-input" placeholder="Full name"> <input name="email" type="text" class="f-input" placeholder="Email"> <textarea name="text" class="f-input" placeholder="Type a comment "></textarea>
+        <button type="button" value="Send">Send</button>
+    </form>
+
+
+</body>
+
+</html>

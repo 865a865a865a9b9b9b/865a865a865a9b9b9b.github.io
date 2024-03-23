@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>@import 'compass/css3';
+
+$n: 32; // has to match number of nodes in DOM
+$h: 100vh; // height of the image strip
+$t: 20s;
+
+$ri: 50vw;
+$l: 2*$ri*tan(360deg/$n/2);
+
+html, body { overflow: hidden; margin: 0;height: 100%; }
+
+body {
+  perspective: 40em;
+  background: black;
+}
+
+.roller {
+  &, * {
+    position: absolute;
+    top: 50%; left: 50%;
+  }
+  transform-style: preserve-3d;
+  animation: rot $t linear infinite;
+}
+
+.slice {
+  margin: -$h/2 (-$l/2);
+  width: $l; height: $h;
+  backface-visibility: hidden;
+  background: url(http://androidforensicphotography.files.wordpress.com/2012/06/canal-rocks-360-degrees.jpg);
+  background-size: $n*$l 100%;
+  @for $i from 0 to $n {
+    &:nth-child(#{$i + 1}) {
+      transform: rotateY($i*360deg/$n) translateZ(-$ri*.98);
+      background-position: $i*$l 50%;
+    }
+  }
+}
+
+@keyframes rot { to { transform: rotateY(1turn); } }</style>
+</head>
+<body>
+  <div id="slice"></div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>html,
+body {
+  background: gray;
+  font-family: sans-serif;
+}
+.content {
+  width: 30%;
+  margin: 0 auto;
+}
+header {
+  font-size: 32px;
+  text-align: center;
+  background: lightblue;
+  padding: 10px;
+  margin: 10px auto;
+}
+.wrapper {
+  text-align: center;
+}
+.wrapper input {
+  height: 35px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.wrapper .randomNumber {
+  height: 100px;
+  background: lightgray;
+  width: 300px;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 36px;
+  padding: 1%;
+  border-radius: 15px;
+}
+
+.myButton {
+  -moz-box-shadow: 3px 4px 0px 0px #8a2a21;
+  -webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
+  box-shadow: 3px 4px 0px 0px #8a2a21;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #ed6b5f),
+    color-stop(1, #a6170d)
+  );
+  background: -moz-linear-gradient(top, #ed6b5f 5%, #a6170d 100%);
+  background: -webkit-linear-gradient(top, #ed6b5f 5%, #a6170d 100%);
+  background: -o-linear-gradient(top, #ed6b5f 5%, #a6170d 100%);
+  background: -ms-linear-gradient(top, #ed6b5f 5%, #a6170d 100%);
+  background: linear-gradient(to bottom, #ed6b5f 5%, #a6170d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr="#ed6b5f",
+      endColorstr="#a6170d",
+      GradientType=0
+    );
+  background-color: #ed6b5f;
+  -moz-border-radius: 18px;
+  -webkit-border-radius: 18px;
+  border-radius: 18px;
+  border: 1px solid #d02718;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 18px 25px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #810e05;
+}
+.myButton:hover {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #a6170d),
+    color-stop(1, #ed6b5f)
+  );
+  background: -moz-linear-gradient(top, #a6170d 5%, #ed6b5f 100%);
+  background: -webkit-linear-gradient(top, #a6170d 5%, #ed6b5f 100%);
+  background: -o-linear-gradient(top, #a6170d 5%, #ed6b5f 100%);
+  background: -ms-linear-gradient(top, #a6170d 5%, #ed6b5f 100%);
+  background: linear-gradient(to bottom, #a6170d 5%, #ed6b5f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr="#a6170d",
+      endColorstr="#ed6b5f",
+      GradientType=0
+    );
+  background-color: #a6170d;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+.myButton:focus {
+  outline: 0;
+}</style>
+</head>
+<body>
+ <div class='content'>
+  <header>Random Number Generator</header>
+  <main>
+    <div class='wrapper'>
+      <form class="randomNumberGenerator" action="generate()">
+        <input type="number" class="min" placeholder="Min Value">
+        <input type="number" class="max" placeholder="Max Value">
+      </form>
+      <div class="randomNumber"></div>
+      <button class="myButton" type="button" value="submit" name="submit">Generate</button>
+    </div>
+  </main>
+</div>
+<script>let generate = function(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor((Math.random() * (max - min + 1)) | 0) + min;
+};
+
+let button = document.querySelector("button");
+button.addEventListener("click", function() {
+  let min = document.querySelector(".min");
+  let max = document.querySelector(".max");
+  let numberDiv = document.querySelector(".randomNumber");
+  numberDiv.innerHTML =
+    "Your Random number is: " + generate(min.value, max.value);
+});</script>   
+</body>
+</html>

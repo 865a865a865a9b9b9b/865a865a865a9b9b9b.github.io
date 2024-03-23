@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test_gradient.html</title>
+  <style>
+    * {
+      margin: 0
+    }
+
+    div {
+      height: 1000px;
+      width: 1000px;
+      /*      */
+      background: radial-gradient(#FFF, #9D00ff);
+      position: relative;
+    }
+
+    hr#vertical {
+      border: solid white 4px;
+      transform: rotate(90deg);
+      position: absolute;
+      top: 50%;
+      width: 100%;
+    }
+
+    hr#horizontal {
+      border: solid white 4px;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <hr id='vertical'>
+    <hr id='horizontal'>
+  </div>
+</body></html>
+
+
+

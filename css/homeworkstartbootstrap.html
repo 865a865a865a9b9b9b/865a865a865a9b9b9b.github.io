@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @import "https://unpkg.com/open-props"layer(design.system);
+        @import "https://unpkg.com/open-props/normalize.min.css"layer(demo.support);
+
+        @layer design.system,
+        demo.support;
+
+        @layer demo {
+            .swatchset {
+                display: flex;
+                transform: skew(-45deg);
+            }
+
+            .swatch {
+                block-size: var(--size-5);
+                aspect-ratio: var(--ratio-ultrawide);
+            }
+        }
+
+        @layer demo.support {
+            body {
+                display: grid;
+                place-content: center;
+                padding: var(--size-5);
+                gap: var(--size-5);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swatchset">
+        <div class="swatch" style="background: var(--pink-5)"></div>
+        <div class="swatch" style="background: var(--grape-5)"></div>
+        <div class="swatch" style="background: var(--indigo-5)"></div>
+        <div class="swatch" style="background: var(--green-5)"></div>
+        <div class="swatch" style="background: var(--yellow-5)"></div>
+        <div class="swatch" style="background: var(--red-5)"></div>
+    </div>
+</body></html>

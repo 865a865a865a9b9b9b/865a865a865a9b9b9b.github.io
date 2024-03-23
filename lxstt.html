@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>/* blue: #007EC2
+	light-blue: #007EC2
+	white: #FFFFFF
+	brown: #A57030
+	light-brown: #E89F43
+	tan: #FFEE6B */
+
+@import url(https://fonts.googleapis.com/css?family=Vollkorn:700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
+@import url(https://fonts.googleapis.com/css?family=Teko);
+body {
+	/* 	background: #000; */
+	text-align: center;
+	font-family: fantasy;
+	font-size: 5rem;
+	margin: 0;
+}
+
+.more {
+	position: fixed;
+	width: 10rem;
+}
+
+.shift {
+	margin: 0;
+	font-size: 2rem;
+	/* Setting the background color to the color I want the text to be, using linear-gradient to create a color shift effect. Setting percentages to control where the color starts. */
+	background: linear-gradient(red, orange 65%, yellow 85%);
+	/* 	Sets the font to clear so text will be the background color */
+	color: transparent;
+	/* Sets the background color to only show on the text	 */
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-stroke: 1px #000;
+	text-stroke: 1px #000;
+}
+
+
+/* blue : #002D62
+	gold: #FDBB30*/
+
+.perds {
+	background: linear-gradient(#002D62 40%, #FFB612 60%);
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
+.bigfoot {
+	background: linear-gradient(#007EC2, #007EC2 35%, #FFF 50%, #E89F43 63%, #FFEE6B 71%);
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-stroke: 2px #000
+}
+
+.r-bow {
+	/* 	This on uses degrees, which sets the angle of the shift. Since no angle was defined in the previous ones, the default to top-to-bottom */
+	background: linear-gradient(45deg, #f22 15%, #f2f 25%, #22f 30%, #2ff 45%, #2f2 60%, #2f2 75%, #ff2 80%, #f22 90%);
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-stroke: 1px #000;
+}
+
+
+/* These use a background image instead of color, with position set to adjust what part of the image shows through the text. You can also add "fixed after the percentage to get a almost animated look as the page scrolls, but I feel this make sit harder to read."  */
+
+.usa {
+	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3iwjz5G2yPniAqSsgFgg_HTlLhCtYde9VPg&usqp=CAU) no-repeat center;
+	background-size: cover;
+	color: transparent;
+	-webkit-background-clip: text;
+	
+	-webkit-text-stroke: 3px blue;
+}
+
+.aboot {
+	background: url(http://www.igoflags.com/wp-content/uploads/canadian-flag-pattern-background.png) no-repeat center 35%;
+	background-size: cover;
+	color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-stroke: 1px #000;
+}
+
+.dusk {
+	position: relative;
+	width: 100%;
+	margin: 0;
+	padding-top: 5rem;
+	background: url(http://cdn.paper4pc.com/images/red-sky-wallpaper-1.jpg) no-repeat center 90%;
+}
+
+.circle {
+	margin: auto;
+	background: linear-gradient(yellow, red 70%);
+	height: 18rem;
+	width: 18rem;
+	border-radius: 50%;
+}
+
+.sea {
+	position: absolute;
+	top: 65%;
+	left: 0;
+	height: 15rem;
+	width: 100%;
+	background: url(http://www.screensavergift.com/wp-content/uploads/OceanSunset.jpg) no-repeat center 85%;
+}</style>
+</head>
+<body>
+  <div class="more">
+	<p class="shift">Scroll &#8681;</p>
+	<p class="shift"> for more</p>
+</div>
+<p class="perds">Smashville</p>
+<p class="bigfoot">Gradient Text</p>
+<p class="r-bow">Look at this rainbow text!!</p>
+<p class="usa">America, &#9733 YEAH!!</p>
+<p class="aboot">Canada, &#x1F341; OK!!</p>
+<div class="dusk">
+	<div class="circle"></div>
+	<div class="sea"></div>
+</div>  
+</body>
+</html>

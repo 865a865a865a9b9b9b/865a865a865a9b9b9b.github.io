@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            border-radius: 25px;
+        }
+
+        header {
+            background-color: rgb(17, 124, 143);
+            padding: 40px;
+        }
+
+        body {
+            margin: 10px;
+           
+            background-image: url("https://cdn2.vectorstock.com/i/1000x1000/10/01/blue-green-geometric-mosaic-triangles-vector-13511001.jpg");
+        }
+
+        h6 {
+            font-style: italic;
+            text-align: right;
+            color: red;
+            text-transform: capitalize;
+        }
+
+        h1 {
+            background-color: rgb(17, 124, 143);
+            color: rgb(241, 241, 241);
+            text-align: center;
+            font-size: 35px;
+            padding: 20px;
+        }
+
+        section {
+            background-color: rgb(241, 241, 241);
+            padding: 10px;
+            border-radius: 25px;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(17, 124, 143);
+        }
+
+        p {
+            text-shadow: rgb(39, 37, 37);
+        }
+
+        nav a {
+            text-decoration: none;
+            padding: 20px;
+            text-align: center;
+            float: left;
+            color: white;
+        }
+
+        nav a:hover {
+            color: rgb(17, 124, 143);
+        }
+
+        nav {
+            background-color: rgb(39, 37, 37);
+            overflow: hidden;
+        }
+
+        footer {
+            background-color: rgb(39, 37, 37);
+            overflow: hidden;
+        }
+
+        footer p {
+            text-decoration: none;
+            text-align: center;
+            float: right;
+            color: white;
+        }
+
+        input[type="submit"] {
+            background-color: rgb(0, 185, 130);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(65, 192, 61);
+        }
+
+        textarea {
+            width: 99%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PAYMENT FORM</title>
+        <link rel="stylesheet" href="formstyle.css">
+    </head>
+
+    <body>
+        <form action="">
+            <section>
+                <h1>Payment Form</h1>
+                <h6><b>Required fields are followed by *</b></h6>
+                <i><b>
+                        <h2>Contact Information</h2>
+                    </b></i>
+                <p>Name*: <input type="text" required name="name" placeholder="John smith"></p>
+                <fieldset>
+                    <legend>Gender*</legend>
+                    <p>
+                        Male <input type="radio" name="gender" id="male" required>
+                        Female <input type="radio" name="gender" id="female" required>
+                        Other <input type="radio" name="gender" id="other" required>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Address*</legend>
+                    <p>
+                        <textarea name="address" id="address" cols="100" rows="8" required placeholder="&nbsp Enter Your Address..."></textarea>
+                    </p>
+                </fieldset>
+                <p>Phone number*: <input type="number" name="phone number" id="phone number" required placeholder="1234567890"> </p>
+                <p>Email*: <input type="email" name="email" id="email" required placeholder="example@gmail.com"></p>
+                <i><b>
+                        <h2>Payment Information</h2>
+                    </b></i>
+                <P>Card Type*:
+                    <select name="card_type" id="card_type" required>
+                        <option value="">Select a card type</option>
+                        <option value="Visa">Visa</option>
+                        <option value="Debitcard">Debitcard</option>
+                        <option value="Mastercard">Mastercard</option>
+                    </select>
+                </P>
+                <p>
+                    Card Number*: <input type="number" name="card_number" id="card_number" required placeholder="eg.1111-2222-3333-4444">
+                </p>
+                <p>
+                    Expiration Date*: <input type="date" name="exp_date" id="exp_date" required>
+                </p>
+                <p>
+                    CVV*: <input type="password" name="cvv" id="cvv" required placeholder="eg.534">
+                </p>
+                <input type="submit" value="Pay Now">
+                <br>
+        </form>
+        <br>
+        </section>
+        <br>
+        <footer>
+            <p>Pay at your own risk! &nbsp &nbsp</p>
+        </footer>
+    </body>
+</body>
+
+</html>

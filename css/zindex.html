@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #container {
+            border: solid red;
+            height: 400px;
+        }
+
+        .item {
+            width: 200px;
+            height: 200px;
+            font-size: 5rem;
+        }
+
+        .i1 {
+            background-color: lime;
+            z-index: 10;
+           
+        }
+
+        .i2 {
+            background-color: deepskyblue;
+            position: relative;
+            top: -100px;
+            left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--   #container>.item.i$*2 -->
+    <div id="container">
+        <div class="item i1">1</div>
+        <div class="item i2">2</div>
+    </div>
+</body></html>

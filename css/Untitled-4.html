@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        form {
+            display: grid;
+            gap: 1.5rem;
+            width: min(20rem, 100%);
+        }
+
+        .form-group {
+            display: grid;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .input-hint {
+            margin: 0;
+            font-size: 1rem;
+            color: hsl(0 0% 70%);
+        }
+
+        /* general styling */
+        html {
+            color-scheme: dark light;
+        }
+
+        body {
+            font-size: 1.5rem;
+            min-height: 100vh;
+            display: grid;
+            place-content: center;
+        }
+
+        input,
+        button {
+            padding: 0.5rem 0.75rem;
+        }
+
+        input::placeholder {
+            font-size: 1rem;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: hsl(175 60% 40%);
+            border: 0;
+            border-radius: 0.25rem;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}" id="email" required type="email" title="must be a valid email address">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input title="Must be at least 8 characters" pattern="[a-zA-Z0-9]{8,}" id="password" required type="password">
+            <p class="input-hint">Must be at least 8 characters</p>
+        </div>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>

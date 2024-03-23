@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html data-brackets-id='2965' lang="en">
+<head data-brackets-id='2966'>
+    <meta data-brackets-id='2967' charset="UTF-8">
+    <title data-brackets-id='2968'>Document</title>
+    <style data-brackets-id='2969'>
+        @import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;300;500;700&family=Jost:wght@400;500;700;800&family=Lora:wght@400;500;600&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;400;500;700&display=swap");
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            border: 0;
+            text-decoration: none;
+            list-style: none;
+            color: inherit;
+        }
+
+        body {
+            background: #6097b7;
+            font-family: "poppins";
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .cont {
+            color: white;
+            background: #040f2d;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 10px rgb(10, 3, 52);
+            width: 320px;
+            user-select: none;
+        }
+
+        .cont h3 {
+            text-align: center;
+            padding: 0.5rem;
+        }
+
+        .def {
+            margin: .5rem 0;
+            color: rgb(137, 137, 136);
+        }
+
+        .result {
+            position: relative;
+        }
+
+        .result i {
+            position: absolute;
+            right: .5rem;
+            cursor: pointer;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: .3s ease;
+            opacity: .6;
+        }
+
+        .result i:hover,
+        .activecopy {
+            opacity: 1;
+        }
+
+        .cont input[type="range"] {
+            width: 100%;
+            margin: 0.5rem 0;
+            height: 4px;
+            accent-color: #2668f1;
+        }
+
+        .choices {
+            display: grid;
+            gap: 0.5rem;
+            margin-block-end: 1rem;
+            color: white;
+        }
+
+        .choices div {
+            background: #091642;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            transition: .3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .choices div:hover {
+            background: #54679c;
+            cursor: pointer;
+        }
+
+        .result .display {
+            padding: 0.5rem;
+            text-align: center;
+            width: 100%;
+            background: #091642;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+        .choices label input {
+            margin-right: .5rem;
+            accent-color: #2668f1;
+        }
+
+        .rangediv {
+            background: #091642;
+            padding: 0.6rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .cont .btn {
+            transition: 0.3s ease;
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+            background: #2668f1;
+            width: 100%;
+            border-radius: 0.5rem;
+            padding: 0.7rem;
+        }
+
+        .btn:hover {
+            background: #1b53c4;
+            cursor: pointer;
+        }
+
+        .msg {
+            background: #040f2d;
+            color: #fff;
+            position: absolute;
+            bottom: 1rem;
+            width: 80%;
+            margin: 0 auto;
+            border-radius: .5rem;
+            text-align: center;
+            padding: .5rem;
+            transition: .3s ease-out;
+            transform: translateY(1rem);
+            opacity: 0;
+        }
+
+        .msg.activemsg {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body data-brackets-id='2970'>
+    <link data-brackets-id='2971' rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <div data-brackets-id='2972' class="cont">
+        <h3 data-brackets-id='2973'>Custom Password Generator</h3>
+        <p data-brackets-id='2974' class="def">your password here</p>
+        <div data-brackets-id='2975' class="result">
+            <p data-brackets-id='2976' class="display">Please Choose a Setting...</p>
+            <i data-brackets-id='2977' id="copy" class="fa-regular fa-copy"></i>
+        </div>
+        <div data-brackets-id='2978'>
+            <p data-brackets-id='2979' class="def">length is: <span data-brackets-id='2980' class="rangelength">10</span></p>
+            <div data-brackets-id='2981' class="rangediv">
+                <p data-brackets-id='2982'>4</p>
+                <input data-brackets-id='2983' min="4" max="16" id="range" type="range" />
+                <p data-brackets-id='2984'>16</p>
+            </div>
+        </div>
+        <div data-brackets-id='2985' class="choices">
+            <p data-brackets-id='2986' class="def">Options</p>
+            <div data-brackets-id='2987'>
+                <label data-brackets-id='2988' for="upper">content with upper case</label><input data-brackets-id='2989' type="checkbox" id="upper" />
+            </div>
+            <div data-brackets-id='2990'>
+                <label data-brackets-id='2991' for="lower">content with lower case</label><input data-brackets-id='2992' type="checkbox" id="lower" />
+            </div>
+            <div data-brackets-id='2993'>
+                <label data-brackets-id='2994' for="number">content with numbers</label><input data-brackets-id='2995' type="checkbox" id="number" />
+            </div>
+            <div data-brackets-id='2996'>
+                <label data-brackets-id='2997' for="symbol">content with symbols</label><input data-brackets-id='2998' type="checkbox" id="symbol" />
+            </div>
+        </div>
+        <button data-brackets-id='2999' class="btn">Generate Password</button>
+    </div>
+    <div data-brackets-id='3000' class="msg">gghmtg('(45"5 is copied to clipborad</div>
+    <script data-brackets-id='3001'>
+        let display = document.querySelector(".display");
+        let copy = document.querySelector("#copy");
+        let range = document.querySelector("#range");
+        let upper = document.querySelector("#upper");
+        let lower = document.querySelector("#lower");
+        let number = document.querySelector("#number");
+        let symbol = document.querySelector("#symbol");
+        let btn = document.querySelector(".btn");
+        let msg = document.querySelector(".msg");
+
+        range.addEventListener('input', (e) => {
+            document.querySelector('.rangelength').textContent = e.target.value
+        })
+
+        function Generate() {
+            let chifre = "";
+            display.textContent = "";
+            if (upper.checked === true) {
+                chifre += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            }
+            if (lower.checked === true) {
+                chifre += 'abcdefghijklmnopqrstuvwxyz'
+            }
+            if (number.checked === true) {
+                chifre += "0123456789"
+            }
+            if (symbol.checked === true) {
+                chifre += '/*-.^@])}=[{(|~é&!?;:ù'
+            }
+            console.log(chifre);
+            for (let i = 0; i < range.value; i++) {
+                display.textContent += chifre[Math.floor(Math.random() * chifre.length)];
+                if (
+                    upper.checked === false &&
+                    lower.checked === false &&
+                    number.checked === false &&
+                    symbol.checked === false
+                ) {
+                    display.textContent = 'Please Choose a Setting...'
+                }
+            }
+        }
+
+        btn.addEventListener("click", Generate);
+        copy.addEventListener("click", () => {
+            copy.classList.add("activecopy");
+            msg.classList.add("activemsg");
+            msg.textContent = `${display.textContent} is copied to clipboard`;
+            navigator.clipboard.writeText(display.textContent);
+            setTimeout(() => {
+                copy.classList.remove("activecopy");
+                msg.classList.remove("activemsg");
+            }, 3000);
+        });
+    </script>
+</body></html>

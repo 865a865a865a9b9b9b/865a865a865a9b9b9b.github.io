@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        section {
+            border: solid 5px green;
+            height: 100px;
+            
+        }
+        img{width: 66px;}
+        tablet{display: none;}
+        mobile{display: none;}
+        desktop{display: none;}
+        @media screen and (min-width:700px) {
+            section {
+                display: inline-block;
+                width: 48%;
+                background-color: aqua;
+            }
+        }
+
+/*
+        @media screen and (min-width:940px) {
+            section {
+                display: inline-block;
+                width: 32%;
+              background-color: aqua;
+            }
+        }
+*/
+        h1{}
+    </style>
+</head>
+
+<body>
+  <h1 id="mobile"></h1>
+  <h1 id="tablet"></h1>
+  <h1 id="Desktop"></h1>
+    <section><img src="https://images.unsplash.com/photo-1673625448598-a09d96472ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5OXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60" alt=""></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+</body></html>

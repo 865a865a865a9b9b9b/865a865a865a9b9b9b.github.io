@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Smiley</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: #ffecb3;
+            height: 100vh;
+        }
+
+        .smiley {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            height: 250px;
+            width: 250px;
+        }
+
+        .face {
+            position: relative;
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            background: #ffdb57;
+            box-shadow: inset -10px -10px 0 0 #ffcb05;
+        }
+
+        .eye {
+            position: absolute;
+            height: 40px;
+            width: 30px;
+            background: #fff;
+            border-radius: 50%;
+            top: 70px;
+        }
+
+        .left {
+            left: 60px;
+        }
+
+        .right {
+            right: 60px;
+        }
+
+        .eye::after {
+            content: "";
+            height: 20px;
+            width: 15px;
+            border-radius: 50%;
+            background-color: #191f45;
+            position: absolute;
+            left: 4px;
+            top: 4px;
+        }
+
+        .mouth {
+            width: 120px;
+            height: 60px;
+            border: 5px solid #191f45;
+            background-color: #191f45;
+            position: absolute;
+            bottom: 45px;
+            left: 50%;
+            transform: translateX(-50%);
+            overflow: hidden;
+            box-sizing: border-box;
+            border-radius: 5px 5px 60px 60px;
+
+        }
+
+        .mouth::after {
+            content: "";
+            width: 100px;
+            height: 50px;
+            background: #ee6055;
+            border-radius: 50px 50px 0 0;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="smiley">
+        <div class="face">
+            <div class="eye-grp">
+                <div class="eye left"></div>
+                <div class="eye right"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+</body></html>

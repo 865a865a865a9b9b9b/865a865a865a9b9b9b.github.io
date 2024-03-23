@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  <style>
+    header {
+        background-color: turquoise;
+        border: solid;
+        border-color: gainsboro;
+        text-align: center;
+        background-color: turquoise;
+    }
+
+    .container {
+        background-color: turquoise;
+        padding: 100px;
+    }
+
+    .lines {
+        width: 10%;
+        height: 45px;
+        position: relative;
+    }
+
+    .lines::after,.lines::before {
+        content: '';
+        position: absolute;
+        margin: auto;
+        height: 2px;
+        background: #fff;
+        width: 45%;
+        top: 45%;
+    }
+
+    .lines::after {
+        left: 0
+    }
+
+    .lines::before {
+        right: 0
+    }
+
+    .masthead-avatar {
+        width: 15rem;
+        vertical-align: middle;
+        text-align: center;
+
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+        font-size: 7em;
+
+    }
+
+</style>
+</head>
+<body>
+<di class="container"><img data-brackets-id="3266" class="masthead-avatar mb-5" src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/avataaars.svg" alt="">
+            <h1>START BOOTSTRAP</h1>
+        </di>
+   <hr>
+    <div id="container"></div>
+    <div id="lines"></div>
+    <div id="circle"></div>
+</body>
+</html>
