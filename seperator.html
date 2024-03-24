@@ -1,17 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Web icon</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Dashed border */
+        hr.dashed {
+            border-top: 3px dashed #bbb;
+        }
+
+        /* Dotted border */
+        hr.dotted {
+            border-top: 3px dotted #bbb;
+        }
+
+        /* Solid border */
+        hr.solid {
+            border-top: 3px solid #bbb;
+        }
+
+        /* Rounded border */
+        hr.rounded {
+            border-top: 8px solid #bbb;
+            border-radius: 5px;
+        }
+
+    </style>
 </head>
 
 <body>
-    <div id="seperator"></div>
-    <h1>search 'cdn fontawesome' to get css</h1>
 
-    <i class="fa-solid fa-star"></i>
+    <h2>Different type of Dividers</h2>
+
+    <p>Dashed</p>
+    <hr class="dashed">
+
+    <p>Dotted</p>
+    <hr class="dotted">
+
+    <p>Solid</p>
+    <hr class="solid">
+
+    <p>Rounded</p>
+    <hr class="rounded">
 
 </body>
 
