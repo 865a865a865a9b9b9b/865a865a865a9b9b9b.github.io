@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>box_shadow.html</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: auto;
+            margin-top: 50px;
+            transition: 1s;
+        }
+
+        div:hover {
+            background-color: deepskyblue;
+            box-shadow: 0px 0px 5px 9px gray;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id='btn'></div>
+
+    <script>
+        btn.addEventListener('click', function() {
+            btn.style.backgroundColor = 'red';
+        });
+
+    </script>
+
+</body>
+
+</html>
