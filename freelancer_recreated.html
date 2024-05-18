@@ -1,9 +1,3 @@
-<!--
-1 mobile first
-2 write html (3min)
-3 copy code for seperator (2min)
-4 set bgc for header (1 min)
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,99 +5,297 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
-        /*    header */
+        #h {
+            width: 150px;
+            padding-top: 30px;
+        }
+
+        .sep {
+            text-align: center;
+        }
+
+        .sep div {}
+
+        .sep hr {
+            border: none;
+            background-color: white;
+            color: white;
+            display: inline-block;
+            height: 3px;
+            width: 91px;
+            align-items: center;
+            border-radius: 2px;
+        }
+
+        .sep i {
+            color: white;
+            padding: 10px;
+            font-size: 30px;
+        }
+
         header {
             background-color: #1abc9c;
+            padding: 30px;
+        }
+
+        h1 {
+            color: white;
+            font-family: sans-serif;
+            margin-bottom: 5px;
+            font-size: 50px;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        p {
+            color: white;
+            font-family: sans-serif;
+            font-size: 20px;
+            margin-top: 20px;
         }
 
         body {
             margin: 0;
+            /* text-align: center; */
         }
 
-        .seperator {
-            text-align: center;
+        h1.black {
+            color: #212529;
+            padding-top: 5px;
+            font-size: 40px;
         }
 
-        .seperator hr {
-            display: inline-block;
-            width: 124px;
-            border: none;
-            height: 4px;
-            background-color: white;
-            border-radius: 5px;
+        hr.black {
+            background-color: #212529;
         }
 
-        .seperator i {
-            font-size: 32px;
-            color: white;
-            margin: 0 14px;
+        i.black {
+            color: #212529;
         }
 
-        header {
-            background-color: #1abc9c;
-            text-align: center;
-            color: white;
-            padding: 100px 0;
-            padding-bottom: 70px;
-        }
-
-        header img {
+        img.small {
             width: 250px;
+            border-radius: 15px;
+            padding: 10px;
         }
 
-        header h1 {
-            font-size: 46px;
-            margin-bottom: 24px;
+        .smaller {
+            font-size: 40px;
         }
 
-        header p {
-            font-size: 22px;
-            margin-top: 36px;
+        p {
+            display: inline-block;
+            padding: 10px;
+            vertical-align: top;
+            text-align: left;
+            font-size: 15px;
+            width: 300px;
+
         }
 
-        #portfolio {
+        a.a {
+            background-color: transparent;
+            padding: 15px;
+            outline-color: white;
+            outline-style: solid;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            font-family: sans-serif;
+            transition: 0.25s;
+        }
+
+        a.a:hover {
+            background-color: white;
+            color: rgb(48, 62, 79);
+        }
+
+        a.b:hover {
+            background-color: white;
+            color: rgb(48, 62, 79);
+        }
+
+
+        input {
+            border: none;
+            width: 400px;
+        }
+
+        label {
+            font-family: sans-serif;
+            font-size: 12px;
+            color: #6c757d;
+            transform-origin: 0 0;
+
+
+
+        }
+
+        form {
+            width: 400px;
+            margin: auto;
+        }
+
+        .textaligncenter {
             text-align: center;
         }
 
-        section h1 {
-            font-size: 34px;
-            color: rgb(44, 62, 80);
+        hr.grey {
+            color: #6c757d;
+        }
+
+        textarea {
+            border: none;
+            width: 400px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: #1abc9c;
+            padding: 15px;
+            outline-style: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: sans-serif;
+            border: none;
+            color: white;
+            width: 70px;
+        }
+
+        div.dark {
+            background-color: #2c3e50;
+            margin-top: 60px;
+            padding: 40px;
+        }
+
+        div.verydark {
+            background-color: #1a252f;
+            padding: 0px;
+        }
+
+        .twentyfive {
+            width: 29.1%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        @media all and (max-width:722px) {
+            p.twentyfive {
+
+                width: 100%;
+                display: inline-block;
+            }
+        }
+
+        i.inv {
+            color: transparent;
+        }
+
+
+        a.b {
+            border-radius: 50%;
+            outline-color: white;
+            outline-style: solid;
+            outline-width: 1px;
+            color: white;
+            padding: 10px;
+            transition: 0.25s;
+            width: 18px;
+        }
+
+        .james {
+            font-size: 10px;
+        }
+
+        b {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .darktwo {
+            background-color: #2c3e50;
+            position: fixed;
+            width: 100%;
+            padding: 20px;
 
         }
 
-        .seperator.black i {
-            color: rgb(44, 62, 80);
+        b.title {
+            color: white;
+            font-size: 17px;
         }
 
-        .seperator black hr {
-            background-color: rgb(44, 62, 80);
+        a {
+            text-decoration: none;
         }
 
-        #portfolio img {
-            width: 410px;
-            border-radius: 10px;
+        div.alignright {
+            text-align: right;
+            display: inline-block;
+            margin-left: 50%;
+        }
+
+        @media all and (max-width:864px) {
+            div.alignright {
+
+                margin-left: 18%;
+            }
+        }
+
+        .bar {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        b.sub {
+            color: white;
+            font-size: 12px;
+            padding-right: 10px;
+            transition: 0.15s;
+        }
+
+        .sub:hover {
+            color: #1abc9c;
         }
 
     </style>
-
 </head>
 
 <body>
-    <header>
-        <main>
-            <img src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/avataaars.svg" alt="">
-        </main>
-        <h1>START BOOTSTRAP</h1>
-        <div class="seperator">
-            <hr>
-            <i class="fa-solid fa-star"></i>
-            <hr>
-        </div>
-        <p>Graphic Artist - Web Designer - Illustrator</p>
-    </header>
+    <div class="darktwo">
 
+        <a href="#" class="bar"><b class="title">START BOOTSTRAP</b></a>
+
+        <div class="alignright bar"><a href="#portfolio"><b class="sub">PORTFOLIO</b></a>
+            <a href="#about"><b class="sub">ABOUT</b></a>
+            <a href="#contact"><b class="sub">CONTACT</b></a>
+
+        </div>
+
+    </div>
+    <div class="textaligncenter">
+
+        <header>
+            <img id="h" src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/avataaars.svg" alt="">
+            <h1>START BOOTSTRAP</h1>
+            <div class="sep">
+                <hr>
+                <i class="fa-solid fa-star"></i>
+                <hr>
+            </div>
+            <p>Grapic Artist - Web designer - Illustrator</p>
+        </header>
+        <section id="portfolio">
+
+ 
+           
+        </section>
+
+
+ 
+   
 </body>
 
 </html>

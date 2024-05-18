@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            margin-left: 150px;
+            height: 2000px;
+        }
+
+        #container2 {
+            width: 500px;
+            height: 600px;
+            border: solid red;
+            position: relative;
+        }
+
+        #container {
+            border: solid;
+            height: 500px;
+            width: 300px;
+        }
+
+        .item {
+            width: 150px;
+            height: 150px;
+            border: solid blue;
+            font-size: 40px;
+            /*      transition: 3s;*/
+        }
+
+        .one {
+            /* by default, position's value is static     */
+            /*      set to non-static position */
+            /*      relative means relative to its origianl position */
+            position: relative;
+            right: 41px;
+        }
+
+        .two {
+            /*      absolute means relative to its container*/
+            /*      but the container should have non-static position*/
+
+            /*      because absolute element looking for a closest non-static container */
+            position: absolute;
+            right: 50px;
+        }
+
+        .three {
+            /*      fixed element relative to viewport*/
+            position: fixed;
+            bottom: 10px;
+            right: 50px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="container2">
+        <div id="container">
+            <div class="item one">relative</div>
+            <div class="item two">absolute</div>
+            <div class="item three">fixed</div>
+        </div>
+    </div>
+    <h1>very important message</h1>
+    <h1>message</h1>
+    <h1>very important message</h1>
+    <h1>very important message</h1>
+    <h1>very important message</h1>
+    <h1>very important message</h1>
+
+</body>
+
+</html>
