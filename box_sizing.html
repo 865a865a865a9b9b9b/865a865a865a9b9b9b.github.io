@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 600px;
+            height: 300px;
+            border: solid;
+            box-sizing: border-box;
+        }
+
+        .item {
+            width: 300px;
+            height: 200px;
+            display: inline-block;
+        }
+
+        #left {
+            background-color: deepskyblue;
+            border: solid 10px;
+            padding: 10px;
+            /*      content-box is default */
+            /*      box-sizing: content-box;*/
+            /* box-sizing redefine width and height*/
+            /*      border-box means the width and height include content, padding and border */
+            box-sizing: border-box;
+        }
+
+        #right {
+            margin-left: -4px;
+            background-color: tomato;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!--  #container>#left.item+#right.item-->
+    <div id="container">
+        <div id="left" class="item"></div>
+        <div id="right" class="item"></div>
+    </div>
+
+</body>
+
+</html>
