@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@1,100&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .header {
+            background: green;
+        }
+
+        .header-logo {}
+
+        .header-logo img {
+            width: 225px;
+        }
+
+        .primary-menu {
+            text-align: right;
+        }
+
+        .primary-menu ul {
+            margin-bottom: 0;
+        }
+
+        .primary-menu ul li {
+            display: inline-block;
+            margin-left: -4px;
+        }
+
+        .primary-menu ul li a {
+            display: block;
+            padding: 0px 20px;
+            color: white;
+            line-height: 77px;
+            border-right: 1px solid;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .primary-menu ul li a:hover {}
+
+        .about {
+            background: rgb(235, 228, 228);
+        }
+
+        .img1 {
+            height: 200px;
+            width: 400px;
+        }
+
+        .img2 {
+            height: 100px;
+            width: 200px;
+        }
+
+        .product-right ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .product-right li {
+            margin-bottom: 5px;
+            background: #33333329;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .product-right h2 {
+            text-align: center;
+            border-bottom: 2px solid;
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            background: #1f1e38;
+            color: wheat;
+        }
+
+        h3 {
+            background-color: beige;
+            height: 333px;
+        }
+
+        .footer a {
+            color: wheat;
+            margin-right: 20px;
+            display: inline-block;
+        }
+
+        p {
+            font-family: sofia sans;
+        }
+
+        h3 {
+            font-family: architects Daughter
+        }
+
+    </style>
+    <script src="js1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="fast_css.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="header-logo">
+                        <a href="#"></a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="primary-menu">
+                        <ul>
+                            <li><a href="#div1">About</a></li>
+                            <li><a href="#div2">Random things about me</a></li>
+                            <li><a href="#div4">Map and contact</a></li>
+                            <li><a href="#">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="benar text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="benar-text">
+                        <h2></h2>
+                        <h3>welcome to my website <br>Thank you for visiting my website, enjoy your visit
+                            <br> <img class="img1" src="https://www.freepik.com/premium-vector/hello-typo-print-design_27282307.htm#fromView=search&page=1&position=25&uuid=d7701ce1-9528-4ba7-b7fc-db603a87e0b7" alt="">
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about text-center pt-5 pb-5" id="div1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>About</h1>
+                    <p class="lead w-75 m-auto">Hello, my name is Ernie, I am 11 years old, I like programming, I like riding bikes, I like to play Minecraft and some other games. You can contact me at ernie021@outlook.com for more if you are interested</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="servis mt-5 mb-5" id="div2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="card">
+                        <span><i class="far fa-lightbulb"></i></span>
+                        <h2>Classes</h2>
+                        <p>I have a coding class, I finished HTML and CSS and am currently learning Python, https://www.teensprogramming.com</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card">
+                        <span><i class="far fa-lightbulb"></i></span>
+                        <h2>Food</h2>
+                        <p>I like to eat steak, sushi, and more. My favorite vegetables are potatoes and tomatoes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card">
+                        <span><i class="far fa-lightbulb"></i></span>
+                        <h2>Favourite place to go</h2>
+                        <p>I like going to aquariums, interesting museums, and more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product pt-5 pb-5" id="div3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="row product-item mb-4">
+                        <div class="col-md-3">
+                            <img class="img2" src="https://images.unsplash.com/photo-1445363692815-ebcd599f7621?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG1vdW50YWluc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="">
+                        </div>
+                        <div class="col-md-9">
+                            <p>I like hiking too, I've been on a few hikes, they were fun, the view is always really nice.</p>
+                        </div>
+                    </div>
+                    <div class="row product-item mb-4">
+                        <div class="col-md-3">
+                            <img data-brackets-id='4416' class="img2" src="data:image/jpeg;base64,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" alt="">
+                        </div>
+                        <div class="col-md-9">
+                            <p>I also like birds, nature will always bring you some unbelievable moments.</p>
+                        </div>
+                    </div>
+                    <div class="row product-item mb-4">
+                        <div class="col-md-3">
+                            <img class="img2" src="https://images.unsplash.com/photo-1677297680558-df5641e505ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMDN8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+                        </div>
+                        <div class="col-md-9">
+                            <p>Thank you so much for stopping by, hope you have an amazing day!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-right">
+                        <div class="main">
+                            <h2>List of interesting projects</h2>
+                            <ul>
+                                <li><a href="https://huggingface.co/spaces/coder/Instruct-X-Decoder">1</a></li>
+                                <li><a href="https://huggingface.co/spaces/laion/CoCoa">2</a></li>
+                                <li><a href="https://huggingface.co/spaces/hao  heliu/audioldm-text-to-audio-generation">3</a></li>
+                                <li><a href="https://huggingface.co/spaces/Hazzzardous/RWKV-Instruct">4</a></li>
+                                <li><a href="https://huggingface.co/spaces/fffiloni/CLIP-Interrogator-2">5</a></li>
+                                <li><a href="https://huggingface.co/spaces/RASMUS/Whisper-youtube-crosslingual-subtitles">6</a></li>
+                                <li><a href="https://huggingface.co/spaces/fabiogra/st-music-splitter">7</a></li>
+                                <li><a href="https://huggingface.co/spaces/multimodalart/mariogpt">8</a></li>
+                                <li><a href="https://huggingface.co/spaces/Alican/pixera">9</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact mt-5 mb-5" id="div4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="google-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186904.7725089326!2d-81.3887021855646!3d42.94904690800077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882ef20ea88d9b0b%3A0x28c7d7699a056b95!2sLondon%2C%20ON!5e0!3m2!1sen!2sca!4v1674427986551!5m2!1sen!2sca" width="555" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="contac-from">
+                            <form action="#">
+                                <input type="text" class="form-control mb-3" placeholder="name">
+                                <input type="email" class="form-control mb-3" placeholder="email">
+                                <input type="text" class="form-control mb-3" placeholder="subject">
+                                <textarea name="" id="" cols="30" rows="10" class="form-control mb-3"></textarea>
+                                <input type="submit" value="submit form" class="btn btn-primary mb-3">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer pt-2 pb-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <p class="mb-0">copyright&copy;Ernie S,2024</p>
+                    </div>
+                    <div class="col-md-7 text-right">
+                        <a href="#">return to the menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
