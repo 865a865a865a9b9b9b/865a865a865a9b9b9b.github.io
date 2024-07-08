@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>breakout</title>
+    <style>
+        canvas {
+            border: solid 10px #66ba66;
+        }
+
+    </style>
+</head>
+
+<body>
+    <canvas id='canvas' width=600 height=600></canvas>
+
+    <script>
+        var canvas = document.querySelector('canvas');
+        var ctx = canvas.getContext('2d');
+
+        // paddle
+        let paddle = {
+            x: canvas.width / 2 - 80,
+            y: canvas.height - 20,
+            w: 160,
+            h: 20,
+            draw: function() {
+                ctx.beginPath();
+                ctx.rect(this.x, this.y, this.w, this.h);
+                ctx.fillStyle = 'black';
+                ctx.fill();
+            }
+        }
+
+        paddle.draw();
+
+        // ball
+        let ball = {
+            x: canvas.width / 2,
+            y: canvas.height - 15 - paddle.h,
+            r: 15,
+            draw: function() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+                ctx.fillStyle = 'blue';
+                ctx.fill();
+            },
+            update: function() {
+                this.x -= 0;
+                this.y -= 2;
+            }
+        }
+
+        ball.update();
+        ball.draw();
+
+        // game loop
+        function loop() {
+            requestAnimationFrame(loop);
+            // clear
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // draw
+            paddle.draw();
+            ball.draw();
+
+            // update
+            ball.update();
+        }
+
+        loop();
+
+    </script>
+
+</body>
+
+</html>
