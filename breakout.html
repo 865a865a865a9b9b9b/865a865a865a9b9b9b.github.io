@@ -4,76 +4,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>breakout</title>
+    <title>Paddle Hit Wall Game</title>
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            margin: 0;
+        }
+
         canvas {
-            border: solid 10px #66ba66;
+            border: 2px solid #00ff00;
+            background-color: #ffffff;
         }
 
     </style>
 </head>
 
 <body>
-    <canvas id='canvas' width=600 height=600></canvas>
-
+    <canvas id="gameCanvas" width="600" height="600"></canvas>
     <script>
-        var canvas = document.querySelector('canvas');
-        var ctx = canvas.getContext('2d');
+        const canvas = document.getElementById("gameCanvas");
+        const context = canvas.getContext("2d");
 
-        // paddle
-        let paddle = {
-            x: canvas.width / 2 - 80,
-            y: canvas.height - 20,
-            w: 160,
-            h: 20,
-            draw: function() {
-                ctx.beginPath();
-                ctx.rect(this.x, this.y, this.w, this.h);
-                ctx.fillStyle = 'black';
-                ctx.fill();
+        // Game elements
+        const paddleWidth = 100;
+        const paddleHeight = 10;
+        const ballRadius = 10;
+        let paddleX = (canvas.width - paddleWidth) / 2;
+        let ballX = canvas.width / 2;
+        let ballY = canvas.height - 30;
+        let ballDX = 2;
+        let ballDY = -2;
+        let rightPressed = false;
+        let leftPressed = false;
+        let hitWall = false;
+
+        // Draw the paddle
+        function drawPaddle() {
+            context.beginPath();
+            context.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+            context.fillStyle = "#000000";
+            context.fill();
+            context.closePath();
+        }
+
+        // Draw the ball
+        function drawBall() {
+            context.beginPath();
+            context.arc(ballX, ballY, ballRadius, 0, Math.PI * 2);
+            context.fillStyle = "#000000";
+            context.fill();
+            context.closePath();
+        }
+
+        // Draw the message
+        function drawMessage() {
+            if (hitWall) {
+                context.font = "30px Arial";
+                context.fillStyle = "blue";
+                context.fillText("paddle hit wall", canvas.width / 4, canvas.height / 2);
             }
         }
 
-        paddle.draw();
+        // Draw everything
+        function draw() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            drawPaddle();
+            drawBall();
+            drawMessage();
+            moveBall();
+            movePaddle();
+        }
 
-        // ball
-        let ball = {
-            x: canvas.width / 2,
-            y: canvas.height - 15 - paddle.h,
-            r: 15,
-            draw: function() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-                ctx.fillStyle = 'blue';
-                ctx.fill();
-            },
-            update: function() {
-                this.x -= 0;
-                this.y -= 2;
+        // Move the ball
+        function moveBall() {
+            ballX += ballDX;
+            ballY += ballDY;
+
+            if (ballX + ballDX > canvas.width - ballRadius || ballX + ballDX < ballRadius) {
+                ballDX = -ballDX;
+            }
+
+            if (ballY + ballDY < ballRadius) {
+                ballDY = -ballDY;
+            } else if (ballY + ballDY > canvas.height - ballRadius) {
+                if (ballX > paddleX && ballX < paddleX + paddleWidth) {
+                    ballDY = -ballDY;
+                } else {
+                    document.location.reload();
+                }
             }
         }
 
-        ball.update();
-        ball.draw();
+        // Move the paddle
+        function movePaddle() {
+            if (rightPressed && paddleX < canvas.width - paddleWidth) {
+                paddleX += 7;
+            } else if (leftPressed && paddleX > 0) {
+                paddleX -= 7;
+            }
 
-        // game loop
-        function loop() {
-            requestAnimationFrame(loop);
-            // clear
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // draw
-            paddle.draw();
-            ball.draw();
-
-            // update
-            ball.update();
+            if (paddleX <= 0 || paddleX >= canvas.width - paddleWidth) {
+                hitWall = true;
+            } else {
+                hitWall = false;
+            }
         }
 
-        loop();
+        // Keydown event handler
+        function keyDownHandler(e) {
+            if (e.key === "Right" || e.key === "ArrowRight") {
+                rightPressed = true;
+            } else if (e.key === "Left" || e.key === "ArrowLeft") {
+                leftPressed = true;
+            }
+        }
+
+        // Keyup event handler
+        function keyUpHandler(e) {
+            if (e.key === "Right" || e.key === "ArrowRight") {
+                rightPressed = false;
+            } else if (e.key === "Left" || e.key === "ArrowLeft") {
+                leftPressed = false;
+            }
+        }
+
+        document.addEventListener("keydown", keyDownHandler, false);
+        document.addEventListener("keyup", keyUpHandler, false);
+
+        setInterval(draw, 10);
 
     </script>
-
 </body>
 
 </html>
