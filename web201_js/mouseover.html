@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle in Canvas</title>
+    <style>
+        #canvas {
+            border: solid green 4px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="600"></canvas>
+    <script>
+        var canvas = document.querySelector('canvas');
+        var ctx = canvas.getContext('2d');
+
+        function drawCircle() {
+            ctx.beginPath();
+            ctx.arc(300, 300, 100, 0, Math.PI * 2);
+            ctx.fillStyle = 'black';
+            ctx.fill();
+            ctx.closePath();
+        }
+        canvas.addEventListener('mousemove',function(e) {
+      console.log("mouse move",e.offsetX,e.offsetY);
+    });
+    
+        drawCircle();
+    </script>
+</body>
+</html>

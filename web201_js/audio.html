@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    canvas {
+      border: solid 10px #66ba66;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <audio id="audio" controls src="./miracle_2-ilya_truhanov.mp3"></audio> -->
+
+  <button id="play">Play</button>
+  <button id="pause">Pause</button>
+  <br>
+  <canvas id='canvas' width=600 height=600></canvas>
+  <script>
+
+    pause.addEventListener('click', function (e) {
+      audio.pause();
+    });
+    play.addEventListener('click', function (e) {
+      processSound();
+    });
+
+    var canvas = document.querySelector('canvas');
+    var ctx = canvas.getContext('2d');
+    /*
+    1 properties
+    2 methods
+    3 events
+    */
+    // 1 way
+    // let audio = document.querySelector('#audio');
+    // 2 way
+    let audio=null;
+    function processSound() {
+
+      audio = new Audio("bounce.mp3")
+
+      // meta data is a data that describe other data
+      audio.addEventListener('loadedmetadata', function () {
+        console.log('loaded');
+        audio.play();
+        audio.volume = 0.1;
+
+        ctx.font = "30px monospace";
+        ctx.fillText(audio.src, 50, 50);
+        ctx.fillText(audio.duration, 50, 100);
+      });
+      audio.addEventListener('play', function () {
+        ctx.fillText("Playing", 50, 150);
+      });
+      audio.addEventListener('pause', function () {
+        ctx.fillText("Pause", 50, 200);
+      })
+      audio.addEventListener('volumechange', function () {
+        ctx.fillText(audio.volume, 50, 250);
+      })
+      audio.addEventListener('ended', function () {
+        ctx.fillText("Ended", 50, 300);
+      })
+      audio.addEventListener('timeupdate', function () {
+        ctx.clearRect(50, 300, 400, 50);
+        ctx.fillText(audio.currentTime, 50, 350);
+      });
+    }
+  </script>
+
+</body>
+
+</html>
